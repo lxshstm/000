@@ -1,0 +1,15 @@
+#cat diff_two_file
+#/bin/sbin
+#!/bin/bash
+verdict =' Wrong Answer '
+score = '0'
+comment =' try harder '
+file1=/base/text/aa.txt
+file2=/base/test/bb.txt
+diff $file1 $file2 > /dev/null
+if [ $0 == 0 ]; then
+verdict =' Right Answer '
+score = '100'
+comment =' nice! '
+fi
+echo "{verdict:$verdict,score:$score,comment:$comment}"
